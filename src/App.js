@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import StudentCard from "./StudentCard";
 
 function App() {
+  // Student details stored in parent
+  const student = {
+    name: "Rahul Sharma",
+    rollNo: "21CS045",
+    marks: 86
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ textAlign: "center", marginTop: "50px" }}>
+      <h1>Student Marks Card</h1>
+      <StudentCard
+        name={student.name}
+        rollNo={student.rollNo}
+        marks={student.marks}
+      />
     </div>
   );
 }
